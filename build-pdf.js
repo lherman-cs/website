@@ -19,7 +19,7 @@ const createPdf = async () => {
         printBackground: true
     };
 
-    const url = `file:${path.join(__dirname, "public", "portfolios", "2020-03-06", "index.html")}`;
+    const url = `file:${path.join(__dirname, "public", "resume", "index.html")}`;
     await page.goto(url, { waitUntil: "networkidle2" });
     await page.pdf(options);
     await browser.close();
