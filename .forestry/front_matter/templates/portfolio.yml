@@ -1,0 +1,104 @@
+---
+label: Portfolio
+hide_body: true
+fields:
+- type: text
+  name: name
+  label: name
+- type: text
+  name: position
+  label: position
+- type: textarea
+  name: description
+  label: description
+- type: field_group_list
+  name: contacts
+  label: contacts
+  fields:
+  - type: text
+    name: text
+    label: text
+  - type: text
+    name: href
+    label: href
+  - type: text
+    name: icon
+    label: icon
+- type: field_group_list
+  name: educations
+  label: educations
+  fields:
+  - type: text
+    name: degree
+    label: degree
+  - type: text
+    name: from
+    label: from
+  - type: text
+    name: date
+    label: date
+  - type: datetime
+    name: gpa
+    label: gpa
+- type: field_group_list
+  name: workExperiences
+  label: workExperiences
+  fields:
+  - type: text
+    name: position
+    label: position
+  - type: text
+    name: company
+    label: company
+  - type: text
+    name: date
+    label: date
+  - type: text
+    name: where
+    label: where
+  - type: list
+    name: achievements
+    label: achievements
+- type: field_group_list
+  name: skills
+  label: skills
+  fields:
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: level
+    label: level
+- type: field_group_list
+  name: languages
+  label: languages
+  fields:
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: level
+    label: level
+- type: field_group_list
+  name: relevantExperiences
+  label: relevantExperiences
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: date
+    label: date
+  - type: list
+    name: descriptions
+    label: descriptions
+- type: field_group_list
+  name: achievements
+  label: achievements
+  fields:
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: date
+    label: date
