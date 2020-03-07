@@ -72,14 +72,16 @@ languages:
 - Indonesian
 relevantExperiences:
 - title: Liar Dice Online
-  date: ''
+  date: 01/2019 - 05/2019
   descriptions:
+  - Implemented a game engine with SDL2, async task scheduler with Promises, async
+    TCP library, page routing system in C++
   - Wrote the server in Go with lobby system, peer discovery, bots, and network disconnection
-    recovery
+    recovery features
+  - Ported the project from C++ to WASM and created a CI/CD pipeline for WASM deployment
   - Designed a message protocol for client & server communication with a simple custom
     Key and Value message format
-  - Implemented a game engine with SDL2, async task scheduler with Promises, C++ async
-    TCP library, page routing system
+  - Designed the project architecture and structure
 - title: LESA
   date: 07/2018
   descriptions:
