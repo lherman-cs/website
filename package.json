@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build-pdf.js",
+  "dependencies": {
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:pdf": "node build-pdf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lherman-cs/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lherman-cs/website/issues"
+  },
+  "homepage": "https://github.com/lherman-cs/website#readme"
+}
