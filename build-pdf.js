@@ -20,7 +20,8 @@ const createPdf = async () => {
     const options = {
         path: outPath,
         format: "A4",
-        printBackground: true
+        printBackground: true,
+        preferCSSPageSize: true
     };
 
     const url = `file:${path.join(__dirname, "public", "resume", "index.html")}`;
