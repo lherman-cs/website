@@ -57,17 +57,20 @@ workExperiences:
       - "Created an easy-to-use Python wrapper for MongoDB query"
       - "Collaborated with 2 undergraduates to write a network simulator"
 skills:
-  - description: "Go, Python, Linux, Docker, Bash, Angular, Git, TS, Vue.js, CSS"
-    level: "high"
-  - description: "C/C++, Java, HTML, JS, Tensorflow, CI/CD, DB, Deployment"
-    level: "medium"
-  - description: "CUDA, OpenCl, React, Django, Flask, Nginx"
-    level: "low"
+  - Go
+  - Python
+  - Javascript
+  - C/C++
+  - Linux
+  - Docker
+  - Bash
+  - Git
+  - CSS
+  - Java
+  - HTML
 languages:
-  - description: "English"
-    level: "medium"
-  - description: "Indonesian"
-    level: "high"
+  - "English"
+  - "Indonesian"
 relevantExperiences:
   - title: "Statismic - statismic.github.io"
     date: "09/2018 - Present"

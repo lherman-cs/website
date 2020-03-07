@@ -78,10 +78,6 @@
             align-items: center;
         }
 
-        .me-sm {
-            margin-block-end: 0.75mm;
-        }
-
         .paper {
             display: flex;
             flex-direction: column;
@@ -135,6 +131,35 @@
 
         .container .padding {
             padding: 2mm 4mm;
+        }
+
+        .horizontal {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            border: 0.25mm solid #323639;
+            border-radius: 1.75mm;
+            padding: 1.25mm 2.5mm;
+            margin: 0.75mm 0.5mm;
+        }
+
+        /* Spacing stuff */
+        .me-sm {
+            margin-block-end: 0.75mm;
+        }
+
+        .mr-sm {
+            margin-right: 0.75mm;
+        }
+
+        .me-md {
+            margin-block-end: 1.5mm;
+        }
+
+        .mr-md {
+            margin-right: 1.5mm;
         }
     </style>
 </head>
@@ -214,12 +239,9 @@
             <section>
                 <div class="padding">
                     <h2>Skills</h2>
-                    <div>
+                    <div class="horizontal">
                         {{ range $index, $skill := $.Param "skills" }}
-                        <section style="display: flex; justify-content: space-between; align-items: center;">
-                            <div style="width: 50mm">{{ $skill.description }}</div>
-                            <div>{{ $skill.level }}</div>
-                        </section>
+                        <div class="badge mr-md">{{ $skill }}</div>
                         {{ end }}
                     </div>
                 </div>
@@ -228,12 +250,9 @@
             <section>
                 <div class="padding">
                     <h2>Languages</h2>
-                    <div>
-                        {{ range $index, $skill := $.Param "languages" }}
-                        <section style="display: flex; justify-content: space-between; align-items: center;">
-                            <div style="width: 50mm">{{ $skill.description }}</div>
-                            <div>{{ $skill.level }}</div>
-                        </section>
+                    <div class="horizontal">
+                        {{ range $index, $language := $.Param "languages" }}
+                        <div class="badge mr-md">{{ $language }}</div>
                         {{ end }}
                     </div>
                 </div>
