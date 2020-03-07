@@ -1,4 +1,5 @@
 ---
+title: "Resume"
 name: "Lukas Herman"
 position: "Full Stack Developer"
 description: |
