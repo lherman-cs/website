@@ -157,7 +157,7 @@
 
         <nav class="no-shrink">
             {{ range $index, $contact := $.Param "contacts" }}
-            <a href="{{ $contact.href }}" target="_blank" rel="noopener">
+            <a {{ printf "href=%q" $contact.href | safeHTMLAttr }} target="_blank" rel="noopener">
                 <!-- <font-awesome-icon icon="col.icon" style="margin-right: 0.5mm" /> -->
                 <i class="{{ $contact.icon }}" style="margin-right: 0.5mm"></i>
                 {{ $contact.text }}
