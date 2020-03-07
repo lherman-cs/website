@@ -274,6 +274,10 @@
             </section>
         </section>
     </div>
+
+    {{ with .Params.forestry_instant_preview_id }}
+    {{- safeHTML (printf "<meta property='forestry_instant_preview_id' content='%s'>" .) -}}
+    {{ end -}}
 </body>
 
 </html>
