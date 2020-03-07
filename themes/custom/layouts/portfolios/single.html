@@ -4,141 +4,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/fa21bc8b47.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #323639;
+            margin: 0;
+            font-size: 3.2mm;
+        }
+
+        h1 {
+            font-size: 7.5mm;
+        }
+
+        h2 {
+            font-size: 5.5mm;
+        }
+
+        h3 {
+            font-size: 4.5mm;
+        }
+
+        h4 {
+            font-size: 3.5mm;
+        }
+
+        h5 {
+            font-size: 3.35mm;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            margin-block-start: 1mm;
+            margin-block-end: 1mm;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .flex-spacer {
+            flex-grow: 1;
+        }
+
+        ul {
+            margin-block-start: 1mm;
+            margin-block-end: 1mm;
+            padding-inline-start: 8mm;
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #047be3;
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .me-sm {
+            margin-block-end: 0.75mm;
+        }
+
+        .paper {
+            display: flex;
+            flex-direction: column;
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .paper>.content {
+            flex: 1 1 auto;
+            overflow: auto;
+        }
+
+        .paper>.no-shrink {
+            flex: 0 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #323639;
+            height: 8mm;
+            color: white;
+        }
+
+        header {
+            display: flex;
+        }
+
+        header>.content {
+            width: 50%;
+        }
+
+        header>.content>.content__wrapper {
+            padding: 3mm 8mm;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 0mm 4mm;
+        }
+
+        .container>* {
+            width: 50%;
+        }
+
+        .container .padding {
+            padding: 2mm 4mm;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="content">
-            <div class="content__wrapper">
-                <h1>{{ $.Param "name" }}</h1>
-                <h3>{{ $.Param "position" }}</h3>
-                <div>
-                    Passionate about coding. Write technical blog. Maintain server. Enjoy
-                    being a full stack developer and learning new things every day. Expert
-                    in Go, Python, Angular, Linux, and Docker. Happy to relocate.
+    <div class="paper">
+        <header class="no-shrink">
+            <div class="content">
+                <div class="content__wrapper">
+                    <h1>{{ $.Param "name" }}</h1>
+                    <h3>{{ $.Param "position" }}</h3>
+                    <div>
+                        Passionate about coding. Write technical blog. Maintain server. Enjoy
+                        being a full stack developer and learning new things every day. Expert
+                        in Go, Python, Angular, Linux, and Docker. Happy to relocate.
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <nav>
-        {{ range $index, $contact := $.Param "contacts" }}
-        <a href="{{ $contact.href }}" target="_blank" rel="noopener">
-            <!-- <font-awesome-icon icon="col.icon" style="margin-right: 0.5mm" /> -->
-            {{ $contact.text }}
-        </a>
-        {{ end }}
-    </nav>
+        <nav class="no-shrink">
+            {{ range $index, $contact := $.Param "contacts" }}
+            <a href="{{ $contact.href }}" target="_blank" rel="noopener">
+                <!-- <font-awesome-icon icon="col.icon" style="margin-right: 0.5mm" /> -->
+                <i class="{{ $contact.icon }}" style="margin-right: 0.5mm"></i>
+                {{ $contact.text }}
+            </a>
+            {{ end }}
+        </nav>
 
 
-    <section class="container">
-        <section>
-            <div class="padding">
-                <h2>Education</h2>
-                <div>
-                    {{ range $index, $education := $.Param "educations" }}
-                    <section>
-                        <h3>{{ $education.degree }}</h3>
-                        <h4>{{ $education.from }}</h4>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div>{{ $education.date }}</div>
-                            <div>{{ $education.gpa }}</div>
-                        </div>
-                    </section>
+        <section class="container content">
+            <section>
+                <div class="padding">
+                    <h2>Education</h2>
+                    <div>
+                        {{ range $index, $education := $.Param "educations" }}
+                        <section>
+                            <h3>{{ $education.degree }}</h3>
+                            <h4>{{ $education.from }}</h4>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div>{{ $education.date }}</div>
+                                <div>{{ $education.gpa }}</div>
+                            </div>
+                        </section>
+                        {{ end }}
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="padding">
+                    <h2>Work Experience</h2>
+                    <div>
+                        {{ range $index, $experience := $.Param "workExperiences" }}
+                        <section>
+                            <h3>{{ $experience.position }}</h3>
+                            <h4>{{ $experience.company }}</h4>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div>{{ $experience.date }}</div>
+                                <div>{{ $experience.where }}</div>
+                            </div>
+                            <div>Achievements/Tasks</div>
+                            <ul>
+                                {{ range $index, $achievement := $experience.achievements }}
+                                <li class="me-sm">
+                                    {{ $achievement }}
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </section>
+                        {{ end }}
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="padding">
+                    <h2>Skills</h2>
+                    <div>
+                        {{ range $index, $skill := $.Param "skills" }}
+                        <section style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="width: 50mm">{{ $skill.description }}</div>
+                            <div>{{ $skill.level }}</div>
+                        </section>
+                        {{ end }}
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="padding">
+                    <h2>Languages</h2>
+                    <div>
+                        {{ range $index, $skill := $.Param "languages" }}
+                        <section style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="width: 50mm">{{ $skill.description }}</div>
+                            <div>{{ $skill.level }}</div>
+                        </section>
+                        {{ end }}
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="padding">
+                    <h2>Relevant Experience</h2>
+                    <div>
+                        {{ range $index, $experience := $.Param "relevantExperiences" }}
+                        <section>
+                            <div style="display: flex; justify-content: space-between;">
+                                <h5>{{ $experience.title }}</h5>
+                                <div>{{ $experience.date }}</div>
+                            </div>
+                            <ul>
+                                {{ range $index, $description := $experience.descriptions }}
+                                <li class="me-sm">
+                                    {{ $description }}
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </section>
+                        {{ end }}
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="padding">
+                    <h2>Achievements</h2>
+                    {{ range $index, $achievement := $.Param "achievements" }}
+                    <p>
+                        {{ $achievement.description }} ({{ $achievement.date }})
+                    </p>
                     {{ end }}
                 </div>
-            </div>
+            </section>
         </section>
-
-        <section>
-            <div class="padding">
-                <h2>Work Experience</h2>
-                <div>
-                    {{ range $index, $experience := $.Param "workExperiences" }}
-                    <section>
-                        <h3>{{ $experience.position }}</h3>
-                        <h4>{{ $experience.company }}</h4>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div>{{ $experience.date }}</div>
-                            <div>{{ $experience.where }}</div>
-                        </div>
-                        <div>Achievements/Tasks</div>
-                        <ul>
-                            {{ range $index, $achievement := $experience.achievements }}
-                            <li class="me-sm">
-                                {{ $achievement }}
-                            </li>
-                            {{ end }}
-                        </ul>
-                    </section>
-                    {{ end }}
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="padding">
-                <h2>Skills</h2>
-                <div>
-                    {{ range $index, $skill := $.Param "skills" }}
-                    <section style="display: flex; justify-content: space-between; align-items: center;">
-                        <div style="width: 50mm">{{ $skill.description }}</div>
-                        <div>{{ $skill.level }}</div>
-                    </section>
-                    {{ end }}
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="padding">
-                <h2>Languages</h2>
-                <div>
-                    {{ range $index, $skill := $.Param "languages" }}
-                    <section style="display: flex; justify-content: space-between; align-items: center;">
-                        <div style="width: 50mm">{{ $skill.description }}</div>
-                        <div>{{ $skill.level }}</div>
-                    </section>
-                    {{ end }}
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="padding">
-                <h2>Relevant Experience</h2>
-                <div>
-                    {{ range $index, $experience := $.Param "relevantExperiences" }}
-                    <section>
-                        <div style="display: flex; justify-content: space-between;">
-                            <h5>{{ $experience.title }}</h5>
-                            <div>{{ $experience.date }}</div>
-                        </div>
-                        <ul>
-                            {{ range $index, $description := $experience.descriptions }}
-                            <li class="me-sm">
-                                {{ $description }}
-                            </li>
-                            {{ end }}
-                        </ul>
-                    </section>
-                    {{ end }}
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="padding">
-                <h2>Achievements</h2>
-                {{ range $index, $achievement := $.Param "achievements" }}
-                <p>
-                    {{ $achievement.description }} ({{ $achievement.date }})
-                </p>
-                {{ end }}
-            </div>
-        </section>
-    </section>
+    </div>
 </body>
 
 </html>
