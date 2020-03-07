@@ -71,6 +71,11 @@ languages:
 - English
 - Indonesian
 relevantExperiences:
+- title: WebRTC MediaDevices in Go
+  date: 11/2019 - Present
+  descriptions:
+  - Designed the project architecture and structure
+  - Initiated and lead the project
 - title: Liar Dice Online
   date: 01/2019 - 05/2019
   descriptions:
