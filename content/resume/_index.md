@@ -79,7 +79,7 @@ relevantExperiences:
   - Designed a message protocol for client & server communication with a simple custom
     Key and Value message format
   - Implemented a game engine with SDL2, async task scheduler with Promises, C++ async
-    TCP library, game router system
+    TCP library, page routing system
 - title: LESA
   date: 07/2018
   descriptions:
