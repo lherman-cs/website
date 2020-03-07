@@ -4,7 +4,11 @@ const { execSync } = require("child_process");
 var fs = require('fs');
 
 const createPdf = async () => {
-    execSync("hugo");
+    execSync("hugo", {
+        env: {
+            'PRINT_MODE': 'on'
+        }
+    });
     const browser = await puppeteer.launch();
 
     const page = await browser.newPage();

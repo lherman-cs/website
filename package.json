@@ -8,6 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "npm run build:pdf && hugo",
     "build:pdf": "node build-pdf.js"
   },
   "repository": {

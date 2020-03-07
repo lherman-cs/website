@@ -275,6 +275,14 @@
         </section>
     </div>
 
+    {{ if not (eq (getenv "PRINT_MODE") "on") }}
+    <div class="download-btn">
+        <a href="/pdf/resume.pdf" download="lukas-herman-resume.pdf" aria-label="download resume">
+            <i class="fas fa-download"></i>
+        </a>
+    </div>
+    {{ end }}
+
     {{ with .Params.forestry_instant_preview_id }}
     {{- safeHTML (printf "<meta property='forestry_instant_preview_id' content='%s'>" .) -}}
     {{ end -}}
