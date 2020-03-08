@@ -29,7 +29,7 @@ educations:
   gpa: 3.95/4.0
 workExperiences:
 - position: 'Software Developer: Platforms Blockchain'
-  company: IBM
+  company: IBM - FoodTrust Blockchain Team
   date: 04/2019 - 08/2019
   where: Remote
   achievements:
