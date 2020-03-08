@@ -28,6 +28,14 @@ educations:
   date: 01/2017 - 05/2019
   gpa: 3.95/4.0
 workExperiences:
+- position: 'Software Developer: Platforms Blockchain'
+  company: IBM
+  date: 04/2019 - 08/2019
+  where: Remote
+  achievements:
+  - Created IBM FoodTrust dashboard UI for clients to manage their partnership
+  - POC, developer, and maintainer for the end-to-end testing framework. Integrated
+    into Jenkins/Kubernetes build pipeline
 - position: Full Stack Developer Intern
   company: IBM - FoodTrust Blockchain Team
   date: 05/2018 - Present
