@@ -28,6 +28,11 @@ educations:
   date: 01/2017 - 05/2019
   gpa: 3.95/4.0
 workExperiences:
+- position: Software Development Engineer
+  company: Amazon
+  date: '08/2019 - Present'
+  where: Seattle, WA
+  achievements: ''
 - position: 'Software Developer: Platforms Blockchain'
   company: IBM - FoodTrust Blockchain Team
   date: 04/2019 - 08/2019
