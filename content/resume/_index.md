@@ -32,7 +32,7 @@ workExperiences:
   company: Amazon
   date: '08/2019 - Present'
   where: Seattle, WA
-  achievements:
+  achievements: 
 - position: 'Software Developer: Platforms Blockchain'
   company: IBM - FoodTrust Blockchain Team
   date: 04/2019 - 08/2019
@@ -93,13 +93,12 @@ relevantExperiences:
   date: 01/2019 - 05/2019
   descriptions:
   - Implemented a game engine with SDL2, async task scheduler with Promises, async
-    TCP library, page routing system in C++
-  - Wrote the server in Go with lobby system, peer discovery, bots, and network disconnection
+    TCP library, and page routing system in C++
+  - Wrote server in Go with lobby system, peer discovery, bots, and network disconnection
     recovery features
   - Ported the project from C++ to WASM and created a CI/CD pipeline for WASM deployment
   - Designed a message protocol for client & server communication with a simple custom
     Key and Value message format
-  - Designed the project architecture and structure
 - title: LESA
   date: 07/2018
   descriptions:
