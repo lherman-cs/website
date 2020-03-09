@@ -32,7 +32,7 @@ workExperiences:
   company: Amazon
   date: '08/2019 - Present'
   where: Seattle, WA
-  achievements: ''
+  achievements:
 - position: 'Software Developer: Platforms Blockchain'
   company: IBM - FoodTrust Blockchain Team
   date: 04/2019 - 08/2019
