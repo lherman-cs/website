@@ -61,13 +61,10 @@ workExperiences:
   company: Clemson Computing & Information Technology
   date: 05/2017 - 02/2018
   where: Clemson, SC
-  achievements:
-  - Used Tensorflow to generate 3D images from 2D images
-  - Led 2 graduate students to build and deploy Open EdX
-  - Developed Docker software to portably make incremental pull backups from cloud
-    instance or local system
-  - Created an easy-to-use Python wrapper for MongoDB query
-  - Collaborated with 2 undergraduates to write a network simulator
+  achievements: Used Tensorflow to generate 3D images from 2D images,Led 2 graduate
+    students to build and deploy Open EdX,Developed Docker software to portably make
+    incremental pull backups from cloud instance or local system,Created an easy-to-use
+    Python wrapper for MongoDB query,Collaborated to write a network simulator
 skills:
 - Go
 - Python
