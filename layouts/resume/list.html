@@ -265,6 +265,9 @@
                                 <h5>{{ $experience.title }}</h5>
                                 <div>{{ $experience.date }}</div>
                             </div>
+                            {{ if $experience.url }}
+                            <a href="{{ $experience.url}}" target="_blank" rel="noopener">{{ $experience.url }}</a>
+                            {{ end }}
                             <ul>
                                 {{ range $index, $description := $experience.descriptions }}
                                 <li class="me-sm">
