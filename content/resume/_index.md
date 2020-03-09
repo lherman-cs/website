@@ -87,6 +87,8 @@ relevantExperiences:
 - title: WebRTC MediaDevices in Go
   date: 11/2019 - Present
   descriptions:
+  - is an interface to obtain access to hardware, various codecs, and p2p data transfer
+    with WebRTC
   - Designed the project architecture and structure
   - Initiated and lead the project
 - title: Liar Dice Online
@@ -97,8 +99,7 @@ relevantExperiences:
   - Wrote server in Go with lobby system, peer discovery, bots, and network disconnection
     recovery features
   - Ported the project from C++ to WASM and created a CI/CD pipeline for WASM deployment
-  - Designed a message protocol for client & server communication with a simple custom
-    Key and Value message format
+  - Designed message protocol with custom key and value message format
 - title: LESA
   date: 07/2018
   descriptions:
@@ -125,16 +126,6 @@ achievements:
   date: 03/2018
 - description: Amazon Hosted AWS Cloudathon 3th Place Winner
   date: 04/2018
-- description: Clemson University Presidents List
-  date: 12/2017 - Present
-- description: Clemson University Deans List
-  date: 05/2017
-- description: The National Society of Leadership and Success
-  date: 12/2016
-- description: Tri-County Technical College Deans List
-  date: 12/2016
-- description: Tri-County Technical College Presidents List
-  date: 05/2016
 - description: Top 25 in the High School Computing Olympiad of the capital of Indonesia
     (9.6 million people)
   date: 12/2015
