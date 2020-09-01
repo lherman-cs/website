@@ -85,6 +85,7 @@
             height: 297mm;
             margin: 0 auto;
             background-color: white;
+            page-break-after: always;
         }
 
         .paper>.content {
@@ -125,12 +126,9 @@
             padding: 0mm 4mm;
         }
 
-        .container>* {
-            width: 50%;
-        }
-
-        .container .padding {
-            padding: 2mm 4mm;
+        .container > * {
+            width: calc(50% - 8mm);
+            padding: 0 4mm;
         }
 
         .horizontal {
@@ -190,107 +188,79 @@
 
 
         <section class="container content">
+            <h2>Education</h2>
+            {{ range $index, $education := $.Param "educations" }}
+            <h3>{{ $education.degree }}</h3>
+            <h4>{{ $education.from }}</h4>
+            <div style="display: flex; justify-content: space-between;">
+                <div>{{ $education.date }}</div>
+                <div>{{ $education.gpa }}</div>
+            </div>
+            {{ end }}
+
+            <h2>Work Experience</h2>
+            {{ range $index, $experience := $.Param "workExperiences" }}
             <section>
-                <div class="padding">
-                    <h2>Education</h2>
-                    <div>
-                        {{ range $index, $education := $.Param "educations" }}
-                        <section>
-                            <h3>{{ $education.degree }}</h3>
-                            <h4>{{ $education.from }}</h4>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div>{{ $education.date }}</div>
-                                <div>{{ $education.gpa }}</div>
-                            </div>
-                        </section>
-                        {{ end }}
-                    </div>
+                <h3>{{ $experience.position }}</h3>
+                <h4>{{ $experience.company }}</h4>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>{{ $experience.date }}</div>
+                    <div>{{ $experience.where }}</div>
                 </div>
+                <ul>
+                    {{ range $index, $achievement := $experience.achievements }}
+                    <li class="me-sm">
+                        {{ $achievement }}
+                    </li>
+                    {{ end }}
+                </ul>
             </section>
+            {{ end }}
 
             <section>
-                <div class="padding">
-                    <h2>Work Experience</h2>
-                    <div>
-                        {{ range $index, $experience := $.Param "workExperiences" }}
-                        <section>
-                            <h3>{{ $experience.position }}</h3>
-                            <h4>{{ $experience.company }}</h4>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div>{{ $experience.date }}</div>
-                                <div>{{ $experience.where }}</div>
-                            </div>
-                            <ul>
-                                {{ range $index, $achievement := $experience.achievements }}
-                                <li class="me-sm">
-                                    {{ $achievement }}
-                                </li>
-                                {{ end }}
-                            </ul>
-                        </section>
-                        {{ end }}
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="padding">
-                    <h2>Skills</h2>
-                    <div class="horizontal">
-                        {{ range $index, $skill := $.Param "skills" }}
-                        <div class="badge mr-md">{{ $skill }}</div>
-                        {{ end }}
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="padding">
-                    <h2>Languages</h2>
-                    <div class="horizontal">
-                        {{ range $index, $language := $.Param "languages" }}
-                        <div class="badge mr-md">{{ $language }}</div>
-                        {{ end }}
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="padding">
-                    <h2>Relevant Experience</h2>
-                    <div>
-                        {{ range $index, $experience := $.Param "relevantExperiences" }}
-                        <section>
-                            <div style="display: flex; justify-content: space-between;">
-                                <h5>{{ $experience.title }}</h5>
-                                <div style="margin-block-start: 1mm;">{{ $experience.date }}</div>
-                            </div>
-                            {{ if $experience.url }}
-                            <a href="{{ $experience.url}}" target="_blank" rel="noopener">{{ $experience.url }}</a>
-                            {{ end }}
-                            <ul>
-                                {{ range $index, $description := $experience.descriptions }}
-                                <li class="me-sm">
-                                    {{ $description }}
-                                </li>
-                                {{ end }}
-                            </ul>
-                        </section>
-                        {{ end }}
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="padding">
-                    <h2>Achievements</h2>
-                    {{ range $index, $achievement := $.Param "achievements" }}
-                    <p>
-                        {{ $achievement.description }} ({{ $achievement.date }})
-                    </p>
+                <h2>Skills</h2>
+                <div class="horizontal">
+                    {{ range $index, $skill := $.Param "skills" }}
+                    <div class="badge mr-md">{{ $skill }}</div>
                     {{ end }}
                 </div>
             </section>
+
+            <section>
+                <h2>Languages</h2>
+                <div class="horizontal">
+                    {{ range $index, $language := $.Param "languages" }}
+                    <div class="badge mr-md">{{ $language }}</div>
+                    {{ end }}
+                </div>
+            </section>
+
+            <h2>Relevant Experience</h2>
+            {{ range $index, $experience := $.Param "relevantExperiences" }}
+            <section>
+                <div style="display: flex; justify-content: space-between;">
+                    <h5>{{ $experience.title }}</h5>
+                    <div style="margin-block-start: 1mm;">{{ $experience.date }}</div>
+                </div>
+                {{ if $experience.url }}
+                <a href="{{ $experience.url}}" target="_blank" rel="noopener">{{ $experience.url }}</a>
+                {{ end }}
+                <ul>
+                    {{ range $index, $description := $experience.descriptions }}
+                    <li class="me-sm">
+                        {{ $description }}
+                    </li>
+                    {{ end }}
+                </ul>
+            </section>
+            {{ end }}
+
+            <h2>Achievements</h2>
+            {{ range $index, $achievement := $.Param "achievements" }}
+            <p>
+                {{ $achievement.description }} ({{ $achievement.date }})
+            </p>
+            {{ end }}
         </section>
     </div>
 

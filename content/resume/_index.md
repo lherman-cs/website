@@ -124,6 +124,7 @@ relevantExperiences:
   - Led a team of 4 people
 - title: Smart Reminder - Hackathon 1st Place Winner
   date: 03/2018
+  url: https://github.com/lherman-cs/smart-reminder
   descriptions:
   - is a fully automated AI break reminder that intelligently turns notifications on/off by detecting if user is sitting
   - Led hardware and software teams of 2 people each
@@ -134,9 +135,6 @@ achievements:
   date: 03/2018
 - description: Amazon Hosted AWS Cloudathon 3th Place Winner
   date: 04/2018
-- description: Top 25 in the High School Computing Olympiad of the capital of Indonesia
-    (9.6 million people)
-  date: 12/2015
-draft: true
+draft: false
 
 ---
