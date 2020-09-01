@@ -1,14 +1,8 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
-const {execSync} = require("child_process");
 
 const createPdf = async () => {
-  execSync("hugo --cleanDestinationDir --minify --verbose", {
-    env: {
-      PRINT_MODE: "on"
-    }
-  });
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   const outDir = path.join(__dirname, "public", "pdf");
