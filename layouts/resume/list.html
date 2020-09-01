@@ -188,16 +188,6 @@
 
 
         <section class="container content">
-            <h2>Education</h2>
-            {{ range $index, $education := $.Param "educations" }}
-            <h3>{{ $education.degree }}</h3>
-            <h4>{{ $education.from }}</h4>
-            <div style="display: flex; justify-content: space-between;">
-                <div>{{ $education.date }}</div>
-                <div>{{ $education.gpa }}</div>
-            </div>
-            {{ end }}
-
             <h2>Work Experience</h2>
             {{ range $index, $experience := $.Param "workExperiences" }}
             <section>
@@ -255,11 +245,14 @@
             </section>
             {{ end }}
 
-            <h2>Achievements</h2>
-            {{ range $index, $achievement := $.Param "achievements" }}
-            <p>
-                {{ $achievement.description }} ({{ $achievement.date }})
-            </p>
+            <h2>Education</h2>
+            {{ range $index, $education := $.Param "educations" }}
+            <h3>{{ $education.degree }}</h3>
+            <h4>{{ $education.from }}</h4>
+            <div style="display: flex; justify-content: space-between;">
+                <div>{{ $education.date }}</div>
+                <div>{{ $education.gpa }}</div>
+            </div>
             {{ end }}
         </section>
     </div>

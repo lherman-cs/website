@@ -4,6 +4,7 @@ name: Lukas Herman
 position: Full Stack Developer
 description: |
   Passionate about coding. Enjoy being a full stack developer and learning new things every day. Expert in Go, Python, Javascript, Linux, and Docker.
+
 contacts:
 - text: lherman.cs@gmail.com
   href: mailto:lherman.cs@gmail.com
@@ -20,11 +21,13 @@ contacts:
 - text: github.com/lherman-cs
   href: https://github.com/lherman-cs
   icon: fab fa-github
+
 educations:
 - degree: Bachelor of Science in Computer Science
   from: Clemson University
   date: 01/2017 - 05/2019
   gpa: 3.95/4.0
+
 workExperiences:
 - position: Software Development Engineer
   company: AWS - Amazon Meetings
@@ -68,6 +71,7 @@ workExperiences:
   - Developed software in a Docker container make Incremental Backups with Pull Backup approach from an arbitary host
   - Created an easy-to-use Python wrapper for MongoDB queries
   - Collaborated to write a network simulator
+
 skills:
 - Go
 - Python
@@ -80,9 +84,11 @@ skills:
 - CSS
 - Java
 - HTML
+
 languages:
 - English
 - Indonesian
+
 relevantExperiences:
 - title: WebRTC MediaDevices in Go
   date: 11/2019 - Present
@@ -92,14 +98,8 @@ relevantExperiences:
   - Original author of Pion WebRTC MediaDevices
   - Designed abstractions for drivers and codecs
   - Supports multiple platforms and major codecs, such as libopenh264, libx264, and libopus
-- title: Free Clinic Telemedicine Web App
-  date: 01/2020 - Present
-  descriptions:
-  - is a volunteer project for free clinic doctors in Greenville, SC to video call translators on demand
-  - Created a signaling protocol with Firebase
-  - Designed and implemented state management, authentication flow, send/receive messages, and peer-to-peer video call with WebRTC
 - title: Live Share mDNS
-  date: 03/2019 - Present
+  date: 03/2019 - 04/2019
   url: https://github.com/lherman-cs/vs-live-share-mdns
   descriptions:
   - is a Visual Studio Code extension that lets users share their LiveShare collaboration sessions
@@ -116,25 +116,16 @@ relevantExperiences:
     recovery features
   - Ported the project from C++ to WASM and created a CI/CD pipeline for WASM deployment
   - Designed message protocol with custom key and value message format
-- title: Scavenger Hunt Slack Bot
-  date: 04/2018
-  descriptions:
-  - Wrote a concurrent server, leveraging mutexes, to handle multiple players
-  - Integrated AWS RDS to store players' data and AWS Rekognition to analyze uploaded user images
-  - Led a team of 4 people
 - title: Smart Reminder - Hackathon 1st Place Winner
   date: 03/2018
   url: https://github.com/lherman-cs/smart-reminder
   descriptions:
   - is a fully automated AI break reminder that intelligently turns notifications on/off by detecting if user is sitting
+  - Best Overall Hack in College Hackathon of 100 participants
   - Led hardware and software teams of 2 people each
   - Wrote RESTful API, web UI, deep learning app for object detection, and debugged
     the hardware team's code
-achievements:
-- description: The Best Overall Hack in Clemsons Hackathon with Smart Reminder Project
-  date: 03/2018
-- description: Amazon Hosted AWS Cloudathon 3th Place Winner
-  date: 04/2018
+
 draft: false
 
 ---
