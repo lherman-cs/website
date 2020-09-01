@@ -1,17 +1,23 @@
 const puppeteer = require("puppeteer");
+const fs = require("fs");
 const path = require("path");
 const {execSync} = require("child_process");
 
 const createPdf = async () => {
-  execSync("hugo", {
+  execSync("hugo --cleanDestinationDir --minify --verbose", {
     env: {
       PRINT_MODE: "on"
     }
   });
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
+  const outDir = path.join(__dirname, "public", "pdf");
+  const outPath = path.join(outDir, "resume.pdf")
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir);
+  }
   const options = {
-    path: path.join("public", "pdf", "resume.pdf"),
+    path: outPath,
     format: "A4",
     printBackground: true
   };
